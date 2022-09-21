@@ -9,11 +9,11 @@ const displayCountries = (countries) => {
     const countriesSection = document.getElementById('all-countries');
     countriesSection.innerHTML = countriesDetails.join(' ');
 }
-const getCountryElements = c => {
-    const {name, flags} = c;
+const getCountryElements = ({name, flags, capital}) => {
     return `
         <div>
-            <h2>${name.common}</h2>
+            <h2>Country name: ${name.common}</h2>
+            <h3>Capital: ${capital}</h3>
             <img src="${flags.png}">
         </div>
     `
